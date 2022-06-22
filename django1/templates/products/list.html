@@ -1,0 +1,21 @@
+{{products}}
+
+
+<ul>
+{% for product in products  %}
+
+
+<li>
+    {{product.id}}
+</li>
+<li>
+{{product.name}}
+</li>
+<li>
+    {{product.price}}
+</li>
+    
+<br>
+{% endfor %}
+</ul>
+

@@ -9,6 +9,7 @@ class Student(models.Model):
     isActive = models.BooleanField(default=True)
     password = models.CharField(max_length=20)
     rollno = models.IntegerField()
+    
 
     class Meta:
         db_table = "student"
