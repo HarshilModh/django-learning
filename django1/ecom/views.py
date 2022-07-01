@@ -18,6 +18,10 @@ class ListProduct(ListView):
      product=model.objects.all()
      template_name ="products/list.html"
      context_object_name="products"
+     def get_context_data(self,**kwargs):
+         context=super().get_context_data(**kwargs)
+         context['product']=self.product
+         print(context)
 class DeleteProduct(DeleteView):
      model= Product
      template_name="products/delete.html"

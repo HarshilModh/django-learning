@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <juth scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Handle</th>
+       </tr>
+  </thead>
+  {% for p  in players  %}
+  <tbody>
+  
+    <tr>
+      <th scope="row">{{p.id}}</th>
+      <td>{{p.pname}}</td>
+      <td>{{p.pscore}}</td>
+      <td>{{p.pstatus}}</td>
+      <td>{{p.pbirthdate}}</td>
+      <td><a type="button" class="btn btn-danger" href="/crud/deletePlayer/{{ p.id }}">Delete</a></td>
+    </tr>
+    
+   </tbody>
+   {% endfor %}
+</table>
+{% endblock content %}

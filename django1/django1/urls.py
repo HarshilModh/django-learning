@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("blog/", include("blog.urls")),
     path("orm/",include("orm.urls")),
-    path("ecom/",include("ecom.urls"))
+    path("ecom/",include("ecom.urls")),
+    path("crud/",include("crud.urls"))
     
 ]
